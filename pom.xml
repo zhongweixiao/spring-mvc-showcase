@@ -193,6 +193,17 @@
 		</dependency>
 	</dependencies>
 	<repositories>
+		<repository>
+		    <id>nexus3</id>
+		    <name>Nexus3</name>
+		    <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+		    <releases>
+			<enabled>true</enabled>
+		    </releases>
+		    <snapshots>
+			<enabled>true</enabled>
+		    </snapshots>
+		</repository>
 		<!-- For testing against latest Spring snapshots -->
 		<repository>
 			<id>org.springframework.maven.snapshot</id>
@@ -209,6 +220,15 @@
 			<snapshots><enabled>false</enabled></snapshots>
 		</repository>
 	</repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus2</id>
+            <name>Nexus2</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </pluginRepository>
+    </pluginRepositories>
+	
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
